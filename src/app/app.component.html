@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+          <a class="nav-link" [routerLink]="[{outlets: {primary: ['home'], sidebar: null}}]" routerLinkActive="active">Home</a>
+      </li>    
+      <li class="nav-item">
+          <a class=" nav-link" [routerLink]="[{outlets: {primary: ['contact'], sidebar: null}}]" routerLinkActive="active">Contact us</a>
+      </li>
+      <li class="nav-item">
+          <a class=" nav-link" [routerLink]="[{outlets: {primary: ['product'], sidebar: null}}]" routerLinkActive="active">Product</a>
+      </li>      
+  </ul>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="main">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="sidebar-right">
+    <router-outlet name="sidebar"></router-outlet>    
+  </div>
+
+</div>
